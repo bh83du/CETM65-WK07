@@ -5,8 +5,8 @@ app=Flask(__name__)
 # Add function for Route
 
 @app.route("/sign-up", methods=["GET", "POST"])
-def sign-up():
-    return render_template('sign-up.html', title = 'Sign-Up')
+def sign_up():
+    return render_template('signup.html', title = 'Sign-Up')
 
 
 
