@@ -4,6 +4,23 @@
 
 {% block main %}
 
-
+<table class="styled-table">
+    <thead>
+        <tr>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Email</th>
+        <th>Password</th>
+        </tr>
+    </thead>    
+    {% for key, value in req.items() %}
+        <tr>
+            <td>{{ name }}</td>
+            <td>{{ dept }}</td>
+            <td>{{ email }}</td>
+            <td>{{ password }}</td>
+        </tr>
+    {% endfor %} 
+</table>
 
 {% endblock %}
