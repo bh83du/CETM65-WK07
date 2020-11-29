@@ -15,18 +15,15 @@ def sign_up():
 
     return render_template('signup.html', title = 'Sign-Up')
 
-# Add function for Home
+# Add function for Route "/data".  This will display the entered data
 
-@app.route("/data")
+@app.route("/data", methods=["GET", "POST"])
 def data():
-    req = request.form
-    name = req.get("name")
-    dept = req.get("dept")
-    email = req.get("email")
-    password = req.get("password")
+    if request.method == "POST":
+        
+        req = request.form
 
-    print(req)
-    return render_template('data.html', title = 'Dictionary Data', name=name, dept=dept, email=email, password=password)
+    return render_template('data.html', title = 'Data', req = req)
 
 
 app.run(debug=True)
